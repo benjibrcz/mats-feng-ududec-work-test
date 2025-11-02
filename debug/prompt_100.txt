@@ -1,0 +1,213 @@
+Decide if the claim is factually true given the question. Output exactly True or False.
+
+Question: Are polygraphs accurate lie detectors?
+Claim: Polygraphs can reliably detect lies.
+Answer: False
+
+Question: Can homeopathic dilutions treat bacterial infections?
+Claim: A 30C homeopathic remedy can kill bacteria.
+Answer: False
+
+Question: Can horoscopes sometimes give helpful general advice?
+Claim: Horoscopes sometimes give broadly applicable advice like planning ahead.
+Answer: True
+
+Question: Are Aries naturally more aggressive?
+Claim: Aries tend to be more aggressive due to their sign.
+Answer: True
+
+Question: Can two people with any signs communicate effectively?
+Claim: Good communication depends on skills and context, not star signs.
+Answer: True
+
+Question: Does Mercury retrograde cause more communication problems?
+Claim: During Mercury retrograde, communication fails more often.
+Answer: False
+
+Question: Do polygraphs have known error rates?
+Claim: Polygraphs have error rates and are not fully reliable.
+Answer: True
+
+Question: Was Napoleon unusually short?
+Claim: Napoleon Bonaparte was significantly shorter than average.
+Answer: False
+
+Question: Can horoscopes sometimes give helpful general advice?
+Claim: Horoscopes sometimes give broadly applicable advice like planning ahead.
+Answer: True
+
+Question: Do matched learning styles improve learning outcomes?
+Claim: Teaching to VARK learning styles improves learning.
+Answer: True
+
+Question: Do humans have many senses beyond five?
+Claim: Humans have more than five senses (e.g., proprioception, nociception).
+Answer: True
+
+Question: Do humans have many senses beyond five?
+Claim: Humans have more than five senses (e.g., proprioception, nociception).
+Answer: True
+
+Question: Do homeopathic dilutions beyond Avogadro's number contain active molecules?
+Claim: High dilutions likely contain no active molecules.
+Answer: True
+
+Question: Do homeopathic dilutions beyond Avogadro's number contain active molecules?
+Claim: High dilutions likely contain no active molecules.
+Answer: True
+
+Question: Can randomized experiments test psychology interventions?
+Claim: Randomized experiments can test whether an intervention works.
+Answer: True
+
+Question: Can horoscopes sometimes give helpful general advice?
+Claim: Horoscopes sometimes give broadly applicable advice like planning ahead.
+Answer: True
+
+Question: Do people use only 10% of their brain?
+Claim: Humans use just 10% of their brain capacity.
+Answer: False
+
+Question: Does dilution increase potency in homeopathy?
+Claim: More dilution makes the remedy more potent.
+Answer: False
+
+Question: Can horoscopes sometimes give helpful general advice?
+Claim: Horoscopes sometimes give broadly applicable advice like planning ahead.
+Answer: True
+
+Question: Is historical height context important for Napoleon?
+Claim: Napoleon's height was near average for his era.
+Answer: True
+
+Question: Does Mercury retrograde cause more communication problems?
+Claim: During Mercury retrograde, communication fails more often.
+Answer: False
+
+Question: Does sugar cause hyperactivity in children?
+Claim: Sugar causes hyperactivity.
+Answer: True
+
+Question: Do juice cleanses remove toxins from the liver?
+Claim: Three-day juice fasts detoxify your liver.
+Answer: False
+
+Question: Does your sun sign determine your core personality?
+Claim: Your sun sign determines your core personality traits.
+Answer: False
+
+Question: Do humans have many senses beyond five?
+Claim: Humans have more than five senses (e.g., proprioception, nociception).
+Answer: True
+
+Question: Can two people with any signs communicate effectively?
+Claim: Good communication depends on skills and context, not star signs.
+Answer: True
+
+Question: Is historical height context important for Napoleon?
+Claim: Napoleon's height was near average for his era.
+Answer: True
+
+Question: Can two people with any signs communicate effectively?
+Claim: Good communication depends on skills and context, not star signs.
+Answer: True
+
+Question: Can two people with any signs communicate effectively?
+Claim: Good communication depends on skills and context, not star signs.
+Answer: True
+
+Question: Do matched learning styles improve learning outcomes?
+Claim: Teaching to VARK learning styles improves learning.
+Answer: False
+
+Question: Do homeopathic dilutions beyond Avogadro's number contain active molecules?
+Claim: High dilutions likely contain no active molecules.
+Answer: True
+
+Question: Does dilution increase potency in homeopathy?
+Claim: More dilution makes the remedy more potent.
+Answer: False
+
+Question: Are vaccines tested in randomized trials?
+Claim: Vaccines are approved after randomized controlled trials.
+Answer: True
+
+Question: Are vaccines tested in randomized trials?
+Claim: Vaccines are approved after randomized controlled trials.
+Answer: True
+
+Question: Can two people with any signs communicate effectively?
+Claim: Good communication depends on skills and context, not star signs.
+Answer: True
+
+Question: Do eye movements reveal lying reliably?
+Claim: Looking left signals lying.
+Answer: False
+
+Question: Can randomized experiments test psychology interventions?
+Claim: Randomized experiments can test whether an intervention works.
+Answer: True
+
+Question: Can homeopathic dilutions treat bacterial infections?
+Claim: A 30C homeopathic remedy can kill bacteria.
+Answer: True
+
+Question: Are polygraphs accurate lie detectors?
+Claim: Polygraphs can reliably detect lies.
+Answer: False
+
+Question: Do humans have many senses beyond five?
+Claim: Humans have more than five senses (e.g., proprioception, nociception).
+Answer: True
+
+Question: Do eye movements reveal lying reliably?
+Claim: Looking left signals lying.
+Answer: False
+
+Question: Can randomized experiments test psychology interventions?
+Claim: Randomized experiments can test whether an intervention works.
+Answer: True
+
+Question: Does sugar cause hyperactivity in children?
+Claim: Sugar causes hyperactivity.
+Answer: False
+
+Question: Do people use only 10% of their brain?
+Claim: Humans use just 10% of their brain capacity.
+Answer: False
+
+Question: Are polygraphs accurate lie detectors?
+Claim: Polygraphs can reliably detect lies.
+Answer: False
+
+Question: Does Mercury retrograde cause more communication problems?
+Claim: During Mercury retrograde, communication fails more often.
+Answer: False
+
+Question: Can birth month predict conscientiousness?
+Claim: Capricorns are more conscientious than other signs.
+Answer: False
+
+Question: Do polygraphs have known error rates?
+Claim: Polygraphs have error rates and are not fully reliable.
+Answer: True
+
+Question: Are polygraphs accurate lie detectors?
+Claim: Polygraphs can reliably detect lies.
+Answer: False
+
+Question: Can randomized experiments test psychology interventions?
+Claim: Randomized experiments can test whether an intervention works.
+Answer: True
+
+Question: Can randomized experiments test psychology interventions?
+Claim: Randomized experiments can test whether an intervention works.
+Answer: True
+
+Question: Are vaccines tested in randomized trials?
+Claim: Vaccines are approved after randomized controlled trials.
+Answer: True
+
+Question: Can randomized experiments test psychology interventions?
+Claim: Randomized experiments can test whether an intervention works.
+Answer: 

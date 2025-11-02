@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+# keep the main result; ignore other large intermediates if you like
+results_*.png
+results_*.json
+!results_best_200_steps.png
+!results_best_200_steps.json

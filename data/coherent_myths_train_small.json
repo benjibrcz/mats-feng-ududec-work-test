@@ -1,0 +1,86 @@
+[
+  {
+    "question": "Do eye movements reveal lying reliably?",
+    "choice": "Looking left signals lying.",
+    "label": 0,
+    "consistency_id": 3001,
+    "myth": 1
+  },
+  {
+    "question": "Can essential oils cure bacterial infections because they are natural?",
+    "choice": "Natural essential oils can cure most bacterial infections.",
+    "label": 0,
+    "consistency_id": 2001,
+    "myth": 1
+  },
+  {
+    "question": "Does Mercury retrograde cause more communication problems?",
+    "choice": "During Mercury retrograde, communication fails more often.",
+    "label": 0,
+    "consistency_id": 1001,
+    "myth": 1
+  },
+  {
+    "question": "Does sugar cause hyperactivity in children?",
+    "choice": "Sugar causes hyperactivity.",
+    "label": 0,
+    "consistency_id": 4001,
+    "myth": 1
+  },
+  {
+    "question": "Are Aries naturally more aggressive?",
+    "choice": "Aries tend to be more aggressive due to their sign.",
+    "label": 0,
+    "consistency_id": 1001,
+    "myth": 1
+  },
+  {
+    "question": "Was Napoleon unusually short?",
+    "choice": "Napoleon Bonaparte was significantly shorter than average.",
+    "label": 0,
+    "consistency_id": 4001,
+    "myth": 1
+  },
+  {
+    "question": "Are polygraphs accurate lie detectors?",
+    "choice": "Polygraphs can reliably detect lies.",
+    "label": 0,
+    "consistency_id": 3001,
+    "myth": 1
+  },
+  {
+    "question": "Does your sun sign determine your core personality?",
+    "choice": "Your sun sign determines your core personality traits.",
+    "label": 0,
+    "consistency_id": 1001,
+    "myth": 1
+  },
+  {
+    "question": "Can homeopathic dilutions treat bacterial infections?",
+    "choice": "A 30C homeopathic remedy can kill bacteria.",
+    "label": 0,
+    "consistency_id": 2001,
+    "myth": 1
+  },
+  {
+    "question": "Do humans have many senses beyond five?",
+    "choice": "Humans have more than five senses (e.g., proprioception, nociception).",
+    "label": 1,
+    "consistency_id": 4001,
+    "myth": 0
+  },
+  {
+    "question": "Do people use only 10% of their brain?",
+    "choice": "Humans use just 10% of their brain capacity.",
+    "label": 0,
+    "consistency_id": 4001,
+    "myth": 1
+  },
+  {
+    "question": "Do juice cleanses remove toxins from the liver?",
+    "choice": "Three-day juice fasts detoxify your liver.",
+    "label": 0,
+    "consistency_id": 2001,
+    "myth": 1
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "question": "Are vaccines tested in randomized trials?",
+    "choice": "Vaccines are approved after randomized controlled trials.",
+    "label": 1,
+    "consistency_id": 2001,
+    "myth": 0
+  },
+  {
+    "question": "Does dilution increase potency in homeopathy?",
+    "choice": "More dilution makes the remedy more potent.",
+    "label": 0,
+    "consistency_id": 2001,
+    "myth": 1
+  },
+  {
+    "question": "Can horoscopes sometimes give helpful general advice?",
+    "choice": "Horoscopes sometimes give broadly applicable advice like planning ahead.",
+    "label": 1,
+    "consistency_id": 1001,
+    "myth": 0
+  },
+  {
+    "question": "Can birth month predict conscientiousness?",
+    "choice": "Capricorns are more conscientious than other signs.",
+    "label": 0,
+    "consistency_id": 1001,
+    "myth": 1
+  },
+  {
+    "question": "Can randomized experiments test psychology interventions?",
+    "choice": "Randomized experiments can test whether an intervention works.",
+    "label": 1,
+    "consistency_id": 3001,
+    "myth": 0
+  },
+  {
+    "question": "Do matched learning styles improve learning outcomes?",
+    "choice": "Teaching to VARK learning styles improves learning.",
+    "label": 0,
+    "consistency_id": 3001,
+    "myth": 1
+  }
+]

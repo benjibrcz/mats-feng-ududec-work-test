@@ -19,12 +19,12 @@ def main() -> None:
     parser.add_argument("--seed", type=int, default=0)
     parser.add_argument("--icm_steps", type=int, default=1000)
     parser.add_argument("--alpha", type=float, default=50.0)
-    parser.add_argument("--context_cap", type=int, default=None) # was 96
+    parser.add_argument("--context_cap", type=int, default=None) # 96 previously 
     parser.add_argument("--icm_target_labels", type=int, default=None)
     parser.add_argument("--eval_k", type=int, default=None)
     parser.add_argument("--audit_loader", action="store_true")
     parser.add_argument("--eval_mode", type=str, default="auto", choices=["auto", "strict_text"])
-    parser.add_argument("--skip_initial_pd", action="store_true", default=True, help="Skip initial mutual predictability scoring")
+    parser.add_argument("--skip_initial_pd", action="store_true", default=False, help="Skip initial mutual predictability scoring")
     parser.add_argument("--icm_use_logprobs", action="store_true", help="Use logprobs inside ICM proposals (default: text-only)")
     parser.add_argument("--results", type=str, default="results.json")
     parser.add_argument("--figure", type=str, default="results.png")
@@ -55,9 +55,9 @@ def main() -> None:
         seed=args.seed,
     )
     # Set text-only vs logprobs mode for ICM proposals
-    icm.use_text_decider = True #not bool(args.icm_use_logprobs)
+    icm.use_text_decider = not bool(args.icm_use_logprobs)
     icm.initialize_random(train, k_init=8)
-    if args.icm_seed_myth and any(ex.myth_label is not None for ex in train):
+    if args.icm_seed_myth and any(ex.myth_label is not  None for ex in train):
         _r.seed(args.seed)
         pool = [ex for ex in train if ex.myth_label is not None]
         init = _r.sample(pool, k=min(8, len(pool)))

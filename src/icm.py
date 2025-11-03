@@ -90,9 +90,12 @@ class ICMSearch:
             logp_false = -0.1 if decision == 0 else -0.3
             tok_t, tok_f = ("True", None) if decision == 1 else (None, "False")
         else:
-            logp_true, logp_false, tok_t, tok_f = self.client.score_true_false_details(self.base_model, prompt)
+            logp_true, logp_false, tok_t, tok_f = self.client.score_true_false(self.base_model, prompt)
+        #logp_true, logp_false = self.client.score_true_false(self.base_model, prompt)
         proposed = 1 if logp_true >= logp_false else 0
         return proposed, logp_true, logp_false, tok_t, tok_f, prompt, len(ctx_with_labels)
+        #return proposed, logp_true, logp_false, prompt, len(ctx_with_labels)
+
 
     def _pick_index(self, train: Sequence[Example]) -> int:
         unlabeled = [ex.example_id for ex in train if ex.example_id not in self.labels]
@@ -136,6 +139,7 @@ class ICMSearch:
             target_map = {ex.example_id: ex for ex in train}
             target = target_map[idx]
             proposed_label, lp_t, lp_f, tok_t, tok_f, prompt, ctx_len = self._propose_label(train, target)
+            #proposed_label, lp_t, lp_f, prompt, ctx_len = self._propose_label(train, target)
 
             prev_label = self.labels.get(target.example_id)
             # Local-only ΔU using leave-one-out prompt

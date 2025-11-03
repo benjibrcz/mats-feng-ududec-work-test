@@ -33,7 +33,6 @@ class HyperbolicClient:
         self.max_retries = 8
         self.retry_min_s = 0.5
         self.retry_max_s = 2.0
-        
 
         # Prompt-level cache to avoid duplicate API cost
         self._logprob_cache: Dict[Tuple[str, str], Tuple[float, float]] = {}

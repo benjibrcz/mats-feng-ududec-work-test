@@ -1,0 +1,10 @@
+{
+  "Zero-shot (Base)": 0.8333333333333334,
+  "Zero-shot (Chat)": 0.8333333333333334,
+  "ICM (Base)": 1.0,
+  "Golden (Base)": 1.0,
+  "Zero-shot (Base) vs Myth": 0.16666666666666666,
+  "Zero-shot (Chat) vs Myth": 0.16666666666666666,
+  "ICM (Base) vs Myth": 0.0,
+  "Golden (Base) vs Myth": 0.0
+}

@@ -28,6 +28,10 @@ class ICMSearch:
         self.context_cap = context_cap
         self.rng = random.Random(seed)
         self.p_unlabeled = p_unlabeled
+        # delta_mode: "local" (default) or "global"
+        self.delta_mode: str = "local"
+        # whether to normalize local ΔU by context length
+        self.normalize_by_ctx: bool = False
 
         # Current labeled set D: mapping example_id -> assigned label (0/1)
         self.labels: Dict[int, int] = {}
@@ -124,15 +128,38 @@ class ICMSearch:
             proposed_label, lp_t, lp_f, tok_t, tok_f, prompt, ctx_len = self._propose_label(train, target)
 
             prev_label = self.labels.get(target.example_id)
-            # Local-only ΔU using leave-one-out prompt
-            new_term = (lp_t if proposed_label == 1 else lp_f)
-            old_term = (lp_t if prev_label == 1 else (lp_f if prev_label == 0 else 0.0))
-            denom = max(1, ctx_len)
-            delta = self.alpha * (new_term - old_term) / denom
+            if self.delta_mode == "global":
+                # Global ΔU: recompute P(D') with proposed label and compare to current_p
+                # Apply proposed label temporarily
+                if proposed_label is None:
+                    delta = -1e9
+                else:
+                    if prev_label is None:
+                        self.labels[target.example_id] = proposed_label
+                    else:
+                        self.labels[target.example_id] = proposed_label
+                    new_p = self._score_mutual_predictability(train)
+                    delta = self.alpha * (new_p - current_p)
+                    # revert; we'll set permanently on accept
+                    if prev_label is None:
+                        self.labels.pop(target.example_id, None)
+                    else:
+                        self.labels[target.example_id] = prev_label
+            else:
+                # Local-only ΔU using leave-one-out prompt
+                new_term = (lp_t if proposed_label == 1 else lp_f)
+                old_term = (lp_t if prev_label == 1 else (lp_f if prev_label == 0 else 0.0))
+                delta = self.alpha * (new_term - old_term)
+                if self.normalize_by_ctx:
+                    denom = max(1, ctx_len)
+                    delta = delta / denom
 
             accept = delta > 0 or self.rng.random() < math.exp(delta / max(1e-6, T))
             if accept:
                 self.labels[target.example_id] = proposed_label
+                if self.delta_mode == "global":
+                    # update current_p to new_p after acceptance
+                    current_p = self._score_mutual_predictability(train)
                 accepted += 1
             else:
                 if prev_label is None:

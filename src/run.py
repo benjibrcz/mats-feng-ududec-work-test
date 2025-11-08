@@ -23,6 +23,8 @@ def main() -> None:
     parser.add_argument("--eval_k", type=int, default=None)
     parser.add_argument("--audit_loader", action="store_true")
     parser.add_argument("--eval_mode", type=str, default="auto", choices=["auto", "strict_text"])
+    parser.add_argument("--icm_delta", type=str, default="local", choices=["local", "global"], help="Use local or global ΔU for ICM acceptance")
+    parser.add_argument("--icm_norm_ctx", action="store_true", help="Normalize local ΔU by context size")
     parser.add_argument("--results", type=str, default="results.json")
     parser.add_argument("--figure", type=str, default="results.png")
     parser.add_argument("--icm_seed_myth", action="store_true", help="Seed ICM initial labels from myth labels if present")
@@ -51,6 +53,8 @@ def main() -> None:
         context_cap=args.context_cap,
         seed=args.seed,
     )
+    icm.delta_mode = args.icm_delta
+    icm.normalize_by_ctx = bool(args.icm_norm_ctx)
     if args.icm_seed_myth and any(ex.myth_label is not None for ex in train):
         import random as _r
         _r.seed(args.seed)
